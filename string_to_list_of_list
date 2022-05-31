@@ -1,0 +1,16 @@
+# Pythonic way
+
+inp = "a2b2c3d4"
+output = [['a', 'a'], ['b', 'b'], ['c', 'c', 'c'], ['d', 'd', 'd', 'd']]
+
+my_numeric = list()
+my_aplha = list()
+output =list()
+for val in inp:
+    if val.isnumeric():
+        my_numeric.append(int(val))
+    else:
+        my_aplha.append(val)
+my_dict = dict(zip(my_aplha , my_numeric ))
+for key,val in my_dict.items():
+    output.append([key]*val)
