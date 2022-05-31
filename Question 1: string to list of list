@@ -20,3 +20,12 @@ mydict=dict(input.value_counts())
 output = []
 for key,val in mydict.items():
     output.append([key]*val)
+    
+# Optimized Pythonic way
+
+input = input.split('|')
+output = list()
+for val in set(input):
+    output.append([val]*input.count(val))
+    output.sort()
+output
