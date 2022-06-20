@@ -1,0 +1,14 @@
+# Return sum of only positive numbers in a list
+
+def list_sum(new_list):
+    sum_ = 0
+    for val in new_list:
+        if val > 0:
+            sum_ = sum_ + val
+            print('Sum',sum_)
+    return sum_
+    
+# Using list comprehension
+
+def list_sum(new_list):
+    return sum([i for i in new_list if i > 0])
